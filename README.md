@@ -1,32 +1,40 @@
-# Haber Başlıkları ve Linkleri Web Scraping Uygulaması
+# News Headline & Article Link Scraper
 
-Bu Python uygulaması, belirlenen bir haber sitesinden güncel haber başlıklarını, yayınlanma zamanlarını ve doğrudan haber linklerini çeker. Çekilen veriler, kolayca incelenebilir ve analiz edilebilir bir `.csv` (Comma Separated Values) dosyasına kaydedilir.
+This Python application automatically extracts current news headlines, publication times, and direct article links from a specified news website. The collected data is then saved into a .csv (Comma Separated Values) file, making it easily viewable and analyzable.
 
-## Ne Yapar?
+# What It Does
+News Information Extraction: Gathers article titles, their publication dates/times, and the direct links to the detailed news pages from the target news site.
 
-* **Haber Bilgileri Çekimi:** Hedef haber sitesindeki makale başlıklarını, yayınlanma tarihlerini/saatlerini ve ilgili haberin detay sayfasına giden linklerini toplar.
-* **Veri Kaydı (CSV):** Çekilen tüm haber verilerini düzenli bir `.csv` dosyasına kaydeder. Bu format, Excel gibi tablolaştırma programlarında kolayca açılabilir ve işlenebilir.
-* **Güncel Bilgi Erişimi:** Haber sitelerinin statik veya yarı-dinamik içeriklerinden hızlı ve etkin veri çekimi sağlar.
+Data Recording (CSV): Saves all extracted news data into a structured .csv file. This format can be easily opened and processed with spreadsheet programs like Excel.
 
-## Neden Önemli?
+Up-to-Date Information Access: Provides fast and efficient data extraction from static or semi-dynamic content on news websites.
 
-Medya takibi, pazar analizi, trend belirleme veya belirli bir konu hakkındaki gelişmeleri izleme gibi alanlarda güncel haber verileri hayati öneme sahiptir. Bu uygulama:
+# Why Is This Important?
+Current news data is vital for fields like media monitoring, market analysis, trend identification, or tracking developments on specific topics. This application helps by:
 
-* **Medya İzleme:** Belirli anahtar kelimeler veya konular etrafındaki haberleri otomatik olarak takip etme potansiyeli sunar.
-* **Pazar Trendleri:** Sektörünüzle ilgili haberleri takip ederek piyasa trendlerini ve duyuruları yakalamaya yardımcı olur.
-* **Zaman ve İş Gücü Tasarrufu:** Manuel olarak haber sitelerini tarama ve veri toplama zahmetini ortadan kaldırır.
+Media Monitoring: Offers the potential to automatically track news related to specific keywords or subjects.
 
-## Kullanılan Teknolojiler
+Market Trends: Helps you catch market trends and announcements by monitoring news relevant to your industry.
 
-* **Python:** Uygulamanın geliştirildiği ana programlama dili.
-* **`requests` Kütüphanesi:** Web sitelerinden HTML içeriği almak için kullanılır.
-* **`BeautifulSoup` Kütüphanesi:** Çekilen HTML içeriğini kolayca ayrıştırmak ve veri ayıklamak için kullanılır.
-* **`csv` Modülü (Python Yerleşik):** Toplanan verileri standart CSV formatında dosyaya yazmak için kullanılır.
+Time & Effort Savings: Eliminates the need for manual news site Browse and data collection, saving valuable time and resources.
 
-## Nasıl Çalışır?
+# Technologies Used
+Python: The primary programming language used for developing the application.
 
-1.  Uygulama, belirlenen haber sitesine HTTP isteği gönderir ve sayfanın HTML içeriğini alır.
-2.  `BeautifulSoup` kullanarak bu HTML içeriğini analiz eder.
-3.  Her bir haber öğesi için başlık, yayınlanma zamanı ve haber linki gibi bilgileri tespit eder ve çeker.
-4.  Çekilen tüm verileri listeler halinde toplar.
-5.  Toplanan verileri, Python'ın `csv` modülü aracılığıyla `haber_verileri.csv` adında bir CSV dosyasına satır satır yazar.
+requests Library: Used for sending HTTP requests and retrieving HTML content from websites.
+
+BeautifulSoup Library: Utilized for easily parsing the retrieved HTML content and extracting specific data.
+
+csv Module (Python Built-in): Used for writing the collected data into a standard CSV file format.
+
+# How It Works
+The application sends an HTTP request to the specified news website and retrieves the page's HTML content.
+
+It then uses BeautifulSoup to parse and analyze this HTML content.
+
+For each news item, it identifies and extracts information such as the headline, publication time, and article link.
+
+All collected data is gathered into lists.
+
+Finally, the collected data is written row by row into a CSV file named news_data.csv using Python's built-in csv module.
+
